@@ -37,7 +37,22 @@ for archivo in os.listdir(rutaTrabajo):
         ext = ext.lower() #deja en minúsculas todas las extensiones en caso de que haya algunas con mayúsculas
 
         if ext in extensiones: # si la extensión obtenida está en el diccionario de extensiones
-            destino = os.path.join(rutaTrabajo, extensiones[ext], archivo) # Se une la ruta con el nombre de carpeta proveniente de la colección extensiones y luego esto se une con el nombre del archivo
+            # Se obtiene la fecha de la última modificación con getmtime()
+            fechaUltimaModificacion = datetime.fromtimestamp(os.path.getmtime(rutaArchivo))
+            subcarpetaFecha = fechaUltimaModificacion.strftime("%Y-%m") # Le damos formato a la fecha usando solo mes y dia
+
+            carpetaTipoArchivo = os.path.join(rutaTrabajo, extensiones[ext])
+            print(carpetaTipoArchivo)
+            # Se crea la ruta C:\Users\Usuario\MiProyecto\TipoArchivo\Año-mes
+            carpetaFecha = os.path.join(carpetaTipoArchivo, subcarpetaFecha)
+
+            # Si no existe la carpeta entonces se crea
+            if not os.path.exists(carpetaFecha):
+                os.makedirs(carpetaFecha)
+
+            # Se une toda la ruta C:\Users\Usuario\MiProyecto\TipoArchivo\Año-mes con el nombre del archivo
+            destino = os.path.join(carpetaFecha, archivo)
+
             shutil.move(rutaArchivo, destino)
 
             with open(os.path.join(rutaTrabajo, "log_movimientos.txt"), "a", encoding="utf-8") as log: # Creamos un bloque with y con el manejamos un objeto llamdo "log"
