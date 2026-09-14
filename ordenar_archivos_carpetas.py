@@ -72,11 +72,9 @@ else:
                 if not os.path.exists(carpetaFecha):
                     os.makedirs(carpetaFecha)
 
-                # Se une toda la ruta C:\Users\Usuario\MiProyecto\TipoArchivo\Año-mes con el nombre del archivo
-                destino = os.path.join(carpetaFecha, archivo)
-                destino2 = Path(destino)
-
-                if not destino2.exists: # Si el archivo no existe
+                if not os.path.isfile(os.path.join(carpetaFecha, archivo)): # Si la ruta no es un archivo
+                    # Se une toda la ruta C:\Users\Usuario\MiProyecto\TipoArchivo\Año-mes con el nombre del archivo
+                    destino = os.path.join(carpetaFecha, archivo)
                     shutil.move(rutaArchivo, destino)
 
                     with open(os.path.join(rutaTrabajo, "log_movimientos.txt"), "a", encoding="utf-8") as log: # Creamos un bloque with y con el manejamos un objeto llamdo "log"
