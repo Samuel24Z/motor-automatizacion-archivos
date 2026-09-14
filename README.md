@@ -30,7 +30,7 @@ En la siguiente figura se muestra la ejecución del programa por medio de línea
 
 Adicionalmente, en la siguiente figura se muestra una ejecución con dos errores, el pimero es ocasioando porque se intenta mover un archivo que previamente ya estaba en las carpetas organizadas y el otro error es originado porque se intenta mover un archivo de registros pero estos solamente se deben quedar en la carpeta raíz de donde se organizaron los archivos.
 
-![Ejecución con errores](/Imagenes/ejecucion_errores.png)
+![Ejecución con errores](/Imagenes/ejecucion_errores.PNG)
 
 
 
