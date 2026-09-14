@@ -22,7 +22,7 @@ La siguiente imagen muestra el arbol de archivos que se desea ordenar.
 
 Ahora bien, el conjunto de archivos que se ordeno se muestra en el árbol de la siguiente imagen.
 
-![Arbol ordenado de archivos](/Imagenes/arbol_modificado_archivos.png)
+![Arbol ordenado de archivos](/Imagenes/arbol_modificado_archivos.PNG)
 
 En la siguiente figura se muestra la ejecución del programa por medio de línea de comandos, en esta ejecución no ocurrió ningún error de procesamiento.
 
