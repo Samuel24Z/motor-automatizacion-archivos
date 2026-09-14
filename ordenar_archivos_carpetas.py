@@ -89,9 +89,9 @@ else:
                     with open(os.path.join(rutaTrabajo, "log_errores.txt"), "a", encoding="utf-8") as log: # Creamos un bloque with y con el manejamos un objeto llamdo "log"
                         log.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Usuario: {usuario} - Error: {archivo} ya existe, no se movio al destino especificado\n") # Escribimos la fecha y hora en que se movió así como el usuario que lo movio y la descripción del error
 
-                print("Procesados:", + procesados)
-                print("Movidos:", + movidos)
-                print("Errores:", + errores)
+print("Procesados:", + procesados)
+print("Movidos:", + movidos)
+print("Errores:", + errores)
                 
 '''
 Fuentes de información
