@@ -32,7 +32,10 @@ Adicionalmente, en la siguiente figura se muestra una ejecución con dos errores
 
 ![Ejecución con errores](/Imagenes/ejecucion_errores.PNG)
 
-
+## Referencias
+* [Módulo os de Python](https://docs.python.org/3/library/os.html)
+* [Módulo shutil para operaciones con archivos](https://docs.python.org/3/library/shutil.html)
+* [Módulo datetime para operaciones con fechas y horas](https://docs.python.org/3/library/datetime.html)
 
 
 
